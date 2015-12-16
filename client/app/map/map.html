@@ -1,0 +1,20 @@
+<navbar></navbar>
+
+<header class="hero-unit" id="banner">
+</header>
+<ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options">
+	<!-- <ui-gmap-map-type options='{expression}' id="map." show='{expression}' refresh='{expression}'></ui-gmap-map-type> -->
+    <ui-gmap-window show="map.window.show" coords="map.window.model" options="map.window.options" closeclick="map.window.closeClick()">
+        <div ng-non-bindable="">{{map.adventures.title}}</div>
+    </ui-gmap-window>
+    <ui-gmap-markers idkey="'bid'" models="map.adventures.markers" coords="'self'" docluster="true" fit="'true'" icon="'icon'" events="map.markersEvents" options="'options'"></ui-gmap-markers>
+
+    <!-- <ui-gmap-window show="map.user.show" coords="map.user.coords" options="map.user.options" closeclick="map.user.closeClick()">
+        <div ng-non-bindable="">{{map.user.title}}</div>
+    </ui-gmap-window> -->
+    <ui-gmap-marker idKey="map.user.id" coords="map.user.coords" icon="map.user.icon"></ui-gmap-marker>
+</ui-gmap-google-map>
+
+<footer></footer>
+
+

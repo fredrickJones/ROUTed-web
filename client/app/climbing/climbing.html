@@ -1,0 +1,95 @@
+<navbar></navbar>
+
+<header class="jumbotron">
+	<div class="container">
+		<div class="page-header">
+			<h1>Add a Climb</h1>
+		</div>
+		<div class="row">
+			<form class="form" name="rockclimb" novalidate>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="well well-sm group-addon-danger"><strong><span class="glyphicon glyphicon-asterisk"></span> Required Field</strong></div>
+					<div class="form-group">
+						<label for="ClimbName">Climb Name</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="ClimbName" id="ClimbName" placeholder="Climb Name" ng-model="climb.name" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ClimbLat">Climb Latitude</label>
+						<div class="input-group">
+							<input type="number" class="form-control" name="ClimbLat" id="ClimbLat" placeholder="Climb Latitude" ng-model="climb.lat" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ClimbLong">Climb Longitude</label>
+						<div class="input-group">
+							<input type="number" class="form-control" name="ClimbLong" id="ClimbLong" placeholder="Climb Latitude" ng-model="climb.lon" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ClimbDiff">Climb Difficulty</label>
+						<div class="input-group">
+							<!-- <input type="number" class="form-control" name="ClimbDiff" id="ClimbDiff" placeholder="Climb Difficulty" ng-model="climb.difficult" required> -->
+							<select class="form-control" name="ClimbDiff" id="ClimbDiff" placeholder="Climb Difficulty" ng-model="climb.difficult" required>
+								<option>5.1</option>
+								<option>5.2</option>
+								<option>5.3</option>
+								<option>5.4</option>
+								<option>5.5</option>
+								<option>5.6</option>
+								<option>5.7</option>
+								<option>5.8</option>
+								<option>5.9</option>
+								<option>5.10a</option>
+								<option>5.10b</option>
+								<option>5.10c</option>
+								<option>5.10d</option>
+								<option>5.11a</option>
+								<option>5.11b</option>
+								<option>5.11c</option>
+								<option>5.11d</option>
+								<option>5.12a</option>
+								<option>5.12b</option>
+								<option>5.12c</option>
+								<option>5.12d</option>
+								<option>5.13a</option>
+								<option>5.13b</option>
+								<option>5.13c</option>
+								<option>5.13d</option>
+								<option>5.14a</option>
+								<option>5.14b</option>
+								<option>5.14c</option>
+								<option>5.14d</option>
+								<option>5.15a</option>
+								<option>5.15b</option>
+								<option>5.15c</option>
+								<option>5.15d</option>
+							</select>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ClimbDescript">Climb Description</label>
+						<div class="input">
+							<textarea class="form-control textarea-noresize" name="ClimbDescript" id="ClimbDescript" rows="5" ng-model="climb.descript"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="btn btn-danger btn-block" ng-click="cancel()">cancel</div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="btn btn-success btn-block" ng-click="newClimb(climb)" ng-disabled="rockclimb.$invalid">submit</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</header>
+
+<footer></footer>

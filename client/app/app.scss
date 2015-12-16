@@ -1,0 +1,57 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../bower_components/font-awesome/scss/font-awesome';
+
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.navbar-default {
+	background-color: rgb(255, 255, 255);
+  border-color: rgba(179, 32, 23, 1);
+  margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: rgb(255, 255, 255);
+  background-color: rgba(179, 32, 23, 1);
+}
+
+.angular-google-map-container { 
+	height: 500px;
+}
+
+.group-addon-danger{
+	background-color: rgba(179, 32, 23, 1);
+	color: rgb(255, 255, 255);
+}
+
+.textarea-noresize {
+	resize: none;
+}
+
+.jumbotron {
+	background-color: rgba(253, 184, 37, 1);
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'admin/admin.scss';
+@import 'camping/camping.scss';
+@import 'climbing/climbing.scss';
+@import 'hiking/hiking.scss';
+@import 'main/main.scss';
+@import 'map/map.scss';
+@import '../components/footer/footer.scss';
+@import '../components/modal/modal.scss';
+// endinjector

@@ -1,0 +1,62 @@
+<navbar></navbar>
+
+<header class="jumbotron">
+	<div class="container">
+		<div class="page-header">
+			<h1>Add a Campsite</h1>
+		</div>
+		<div class="row">
+			<form class="form" name="campsite" novalidate>
+				<div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+					<div class="well well-sm group-addon-danger"><strong><span class="glyphicon glyphicon-asterisk"></span> Required Field</strong></div>
+					<div class="form-group">
+						<label for="SiteName">Campsite Name</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="SiteName" id="SiteName" placeholder="Campsite Name" ng-model="site.name" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="SitePrice">Campsite Price (in dollars)</label>
+						<div class="input-group">
+							<div class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></div>
+							<input type="number" class="form-control" name="SitePrice" id="SitePrice" placeholder="Campsite Price" aria-label="Amount (to the nearest dollar)" ng-model="site.price" required>
+							<span class="input-group-addon">.00</span></span>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="SiteLat">Campsite Latitude</label>
+						<div class="input-group">
+							<input type="number" class="form-control" name="SiteLat" id="SiteLat" placeholder="Campsite Latitude" ng-model="site.lat" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="SiteLong">Campsite Longitude</label>
+						<div class="input-group">
+							<input type="number" class="form-control" name="SiteLong" id="SiteLong" placeholder="Campsite Latitude" ng-model="site.lon" required>
+							<span class="input-group-addon group-addon-danger"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="SiteDescript">Campsite Description</label>
+						<div class="input">
+							<textarea class="form-control textarea-noresize" name="SiteDescript" id="SiteDescript" rows="5" ng-model="site.descript"></textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="btn btn-danger btn-block" ng-click="cancel()">cancel</div>
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+							<div class="btn btn-success btn-block" ng-click="newSite(site)" ng-disabled="campsite.$invalid">submit</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</header>
+
+<footer></footer>
