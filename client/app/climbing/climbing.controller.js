@@ -14,4 +14,7 @@ angular.module('routedApp')
 			}
 			// $scope.climb = null;
 		};
+		$scope.cancel = function() {
+			$scope.climb = null;
+		}
   });

@@ -88,16 +88,16 @@ exports.show = function(req, res) {
 
 // Creates a new Climbing in the DB
 exports.create = function(req, res) {
-  // var coords = [req.body.lon, req.body.lat];
-  // req.body.loc = coords;
-  // var newClimb = new Climbing(req.body);
-  // newClimb.save(function(err, climb) {
-  //   if(err) {
-  //     return res.status(500).end();
-  //   } else {
-  //     return res.status(200).json(climb);
-  //   }
-  // })
+  var coords = [req.body.lon, req.body.lat];
+  req.body.loc = coords;
+  var newClimb = new Climbing(req.body);
+  newClimb.save(function(err, climb) {
+    if(err) {
+      return res.status(500).end();
+    } else {
+      return res.status(200).json(climb);
+    }
+  })
   Climbing.createAsync(req.body)
     .then(responseWithResult(res, 201))
     .catch(handleError(res));

@@ -10,11 +10,7 @@ angular.module('routedApp')
 				Adventures.addSite(siteData);
 			} else {
 				$scope.campsite.submitted = true;
-				// $scope.site.name = '';
-				// $scope.site.loc[1] = '';
-				// $scope.site.loc[0] = '';
-				// $scope.site.trailHead = '';
-				// $scope.site.price = '';
+				// $scope.site = null;
 			}
 		};
   });

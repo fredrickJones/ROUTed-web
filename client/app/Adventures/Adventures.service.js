@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('routedApp')
-  .service('Adventures', function ($q, $http, Coordinates) {
+  .service('Adventures', function($q, $http, Coordinates) {
     // AngularJS will instantiate a singleton by calling "new" on this function
 // CLIMBING
     this.addClimb = function(rockData) {
-    	console.log("rock Data" + rockData);
+    	console.log(rockData);
     	$http.post('/api/rock-climbing', rockData);
     };
+
     this.getClimb = function() {
     	var markers = [];
     	var deferred = $q.defer();
