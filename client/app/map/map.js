@@ -19,7 +19,7 @@ angular.module('routedApp')
 					}//,
 					// climbing: function(Adventures) {  //<--this will load points on load
 					// 	return Adventures.getClimb();
-					// },
+					// }//,
 					// camping: function(Adventures) {  //<--this will load points on load
 					// 	return Adventures.getCamp();
 					// },

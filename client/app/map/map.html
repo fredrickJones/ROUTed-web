@@ -1,7 +1,22 @@
 <navbar></navbar>
 
-<header class="hero-unit" id="banner">
-</header>
+<div class="navbar navbar-default navbar-static-top">
+	<div class="container">
+		<nav class="nav navbar-nav">
+			<form class="form-horizontal navbar-header">
+				<div class="form-group col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<label class="checkbox-inline" ng-repeat="adventure in adventures">
+						<input type="checkbox" name="selectedAdventures[]" value="{{adventure.title}}" ng-model="adventure.selected"> {{adventure.title}}
+					</label>
+				</div>
+				<div class="form-group col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<button type="submit" class="btn btn-sm btn-default" ng-click="getAdventures(adventure)">show markers</button>
+				</div>
+			</form>
+		</nav>
+	</div>
+</div>
+
 <ui-gmap-google-map center="map.center" zoom="map.zoom" options="map.options">
 	<!-- <ui-gmap-map-type options='{expression}' id="map." show='{expression}' refresh='{expression}'></ui-gmap-map-type> -->
     <ui-gmap-window show="map.window.show" coords="map.window.model" options="map.window.options" closeclick="map.window.closeClick()">

@@ -13,21 +13,6 @@ angular.module('routedApp')
       }
     ];
 
-    $scope.adventure = [
-      {
-        'title': 'Camping',
-        'state': 'camping'
-      },
-      {
-        'title': 'Climbing',
-        'state': 'climbing'
-      },
-      {
-        'title': 'Hiking',
-        'state': 'hiking'
-      }
-    ];
-
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
     $scope.isAdmin = Auth.isAdmin;

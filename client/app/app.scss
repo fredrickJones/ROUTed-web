@@ -8,23 +8,31 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
  */
 
 .browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+nav.nav {
+	padding-top: 15px;
+}
+
+.navbar {
+	min-height: 30px;
 }
 
 .navbar-default {
 	background-color: rgb(255, 255, 255);
-  border-color: rgba(179, 32, 23, 1);
-  margin-bottom: 0;
+	border-color: rgba(179, 32, 23, 1);
+	margin-bottom: 0;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: rgb(255, 255, 255);
-  background-color: rgba(179, 32, 23, 1);
+	color: rgb(255, 255, 255);
+	background-color: rgba(179, 32, 23, 1);
 }
 
 .angular-google-map-container { 
